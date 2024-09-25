@@ -1,6 +1,12 @@
 # Name That Sport! 🏀🏈
 # [Try the website at this link](https://namethatsport.streamlit.app/) 
 
+# Take a look at the website in action!
+
+
+https://github.com/user-attachments/assets/e0aaedc0-e793-4368-9dce-9ba0f2dfadbb
+
+
 Using a deep CNN to classify images of sports
 
 This project was a ton of fun for me! I wanted to learn how to build a CNN to classify images. As a massive sports fan, I felt there were no better images to classify than images of different sports. I had a few challenges while building this, but overall, it was a great learning experience for me.
