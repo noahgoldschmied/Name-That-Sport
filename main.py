@@ -9,24 +9,24 @@ sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
 sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding='utf-8')
 
 
-st.set_page_config(page_title="Name That Sport")  # Set tab title
+st.set_page_config(page_title="Name That Sport", layout="wide")  # Set tab title
 
 # this list holds all of the classes that the model has, will help with guess indexing
-classes = ['air hockey', 'ampute football', 'archery', 'arm wrestling', 'axe throwing', 'balance beam', 'barrel racing',
-           'baseball', 'basketball', 'baton twirling', 'bike polo', 'billiards', 'bmx', 'bobsled', 'bowling', 'boxing',
-           'bull riding', 'bungee jumping', 'canoe slamon', 'cheerleading', 'chuckwagon racing', 'cricket', 'croquet',
-           'curling', 'disc golf', 'fencing', 'field hockey', 'figure skating men', 'figure skating pairs',
-           'figure skating women', 'fly fishing', 'football', 'formula 1 racing', 'frisbee', 'gaga', 'giant slalom',
-           'golf', 'hammer throw', 'hang gliding', 'harness racing', 'high jump', 'hockey', 'horse jumping',
-           'horse racing', 'horseshoe pitching', 'hurdles', 'hydroplane racing', 'ice climbing', 'ice yachting',
-           'jai alai', 'javelin', 'jousting', 'judo', 'lacrosse', 'log rolling', 'luge', 'motorcycle racing', 'mushing',
-           'nascar racing', 'olympic wrestling', 'parallel bar', 'pole climbing', 'pole dancing', 'pole vault', 'polo',
-           'pommel horse', 'rings', 'rock climbing', 'roller derby', 'rollerblade racing', 'rowing', 'rugby',
-           'sailboat racing', 'shot put', 'shuffleboard', 'sidecar racing', 'ski jumping', 'sky surfing', 'skydiving',
-           'snow boarding', 'snowmobile racing', 'speed skating', 'steer wrestling', 'sumo wrestling', 'surfing',
-           'swimming', 'table tennis', 'tennis', 'track bicycle', 'trapeze', 'tug of war', 'ultimate', 'uneven bars',
-           'volleyball', 'water cycling', 'water polo', 'weightlifting', 'wheelchair basketball', 'wheelchair racing',
-           'wingsuit flying']
+classes = ['Air Hockey', 'Amputee Football', 'Archery', 'Arm Wrestling', 'Axe Throwing', 'Balance Beam', 'Barrel Racing',
+           'Baseball', 'Basketball', 'Baton Twirling', 'Bike Polo', 'Billiards', 'BMX', 'Bobsled', 'Bowling', 'Boxing',
+           'Bull Riding', 'Bungee Jumping', 'Canoe Slalom', 'Cheerleading', 'Chuckwagon racing', 'Cricket', 'Croquet',
+           'Curling', 'Disc Golf', 'Fencing', 'Field Hockey', 'Figure Skating Men', 'Figure Skating Pairs',
+           'Figure Skating Women', 'Fly Fishing', 'Football', 'Formula 1 Racing', 'Frisbee', 'Gaga', 'Giant Slalom',
+           'Golf', 'Hammer Throw', 'Hang Gliding', 'Harness Racing', 'High Jump', 'Hockey', 'Horse Jumping',
+           'Horse Racing', 'Horseshoe Pitching', 'Hurdles', 'Hydroplane Racing', 'Ice Climbing', 'Ice Yachting',
+           'Jai Alai', 'Javelin', 'Jousting', 'Judo', 'Lacrosse', 'Log Rolling', 'Luge', 'Motorcycle Racing', 'Mushing',
+           'Nascar Racing', 'Olympic Wrestling', 'Parallel Bar', 'Pole Climbing', 'Pole Dancing', 'Pole Vault', 'Polo',
+           'Pommel Horse', 'Rings', 'Rock Climbing', 'Roller Derby', 'Rollerblade Racing', 'Rowing', 'Rugby',
+           'Sailboat Racing', 'Shot Put', 'Shuffleboard', 'Sidecar Racing', 'Ski Jumping', 'Sky Surfing', 'Skydiving',
+           'Snow Boarding', 'Snowmobile Racing', 'Speed Skating', 'Steer Wrestling', 'Sumo Wrestling', 'Surfing',
+           'Swimming', 'Table Tennis', 'Tennis', 'Track Bicycle', 'Trapeze', 'Tug of War', 'Ultimate', 'Uneven Bars',
+           'Volleyball', 'Water Cycling', 'Water Polo', 'Weightlifting', 'Wheelchair Basketball', 'Wheelchair Racing',
+           'Wingsuit Flying']
 classes = [name.encode('utf-8').decode('utf-8') for name in classes]
 
 
